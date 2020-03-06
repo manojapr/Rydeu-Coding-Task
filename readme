@@ -54,3 +54,8 @@ Pricing:
   km_price: 2
   fix_price: 25
   
+* build the db using postgres
+* use service object for calculating price
+* every price will be in cent
+* Design and schema with proper validation and use validation on service object appropriately.
+* Coding style is important.
