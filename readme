@@ -1,15 +1,19 @@
 Backend:
-Build a greenfield app using NodeJS with pricing api.
-Build a pricing module and rest api for fronend to find available pricing for different vehicles for different city.
-organization has many pricing based on city and vehicle type.
-this pricing is mostly on distane basis but first 10 km has fix price. then every km cost 2 EUR for mini van and 1 EUR for sedan per km.
-return both vehicles of that city for that organization pricing
+
+Build a greenfield app with rest api for calculating total transfer cost for a ondemand taxi app using NodeJS.
+
+- Build a pricing module with rest api to find available pricing for different vehicles for different 
+  city based on disctance travelling.
+- Organization(client) has many pricing based on city and vehicle type.
+- Pricing should be calculated based on a base price with fix distance and then per km price for remaining distance. 
+  Ex. Base km is 10 km. And base price is 25 euro. Then each additional km cost 2 EUR for van and 1 EUR for sedan.
+- Api should return pricing for both vehicles of that city for that organization.
 
 Api request body:
 {
  city: berlin
- organization_id: 002
- total_hours: 8
+ organization_id: 001
+ total_distance: 20
 }
 
 API response body:
@@ -27,8 +31,9 @@ API response body:
 
 
 relations:
+==========
 
-organization has many pricings. Pricing row has one vehicle. 
+Organization has many pricings. Pricing row has one vehicle. 
 
 
 Organization:
@@ -45,5 +50,7 @@ Pricing:
   organization_id:
   vehicle_id:
   city:
-  total_amount_per_hour:
+  base_distance_in_km: 10,
+  km_price: 2
+  fix_price: 25
   
