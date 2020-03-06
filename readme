@@ -46,7 +46,6 @@ Vehicle:
   description:
   
 Pricing: 
-  id:
   organization_id:
   vehicle_id:
   city:
