@@ -28,8 +28,6 @@ API response body:
  }
 ]
 
-
-
 relations:
 ==========
 
@@ -53,8 +51,8 @@ Pricing:
   km_price: 2
   fix_price: 25
   
-* build the db using postgres
-* use service object for calculating price
-* every price will be in cent
-* Design and schema with proper validation and use validation on service object appropriately.
-* Coding style is important.
+* Use postgresql for the Database.
+* use service object for calculating price. Dont write all code in controller.
+* Every price will be in cent so it can be calculated without the decimal issues
+* Design schema with proper validation while taking inputs from api payloads and use validation on service object appropriately.
+* Coding style is important. Please follow some standard linting like airbnb or any popular one.
