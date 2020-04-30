@@ -20,11 +20,11 @@ API response body:
 [
 {
  vehicle_type: minivan
- total_price: 200
+ total_price: 45
 },
 {
  vehicle_type: sedan
- total_price: 150
+ total_price: 35
  }
 ]
 
